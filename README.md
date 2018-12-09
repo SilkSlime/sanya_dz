@@ -69,6 +69,6 @@ INSERT INTO `categories` (`name`) VALUES ('/po/litics');
 INSERT INTO `categories` (`name`) VALUES ('/se/rials');
 INSERT INTO `categories` (`name`) VALUES ('/p/rogramming');
 ```
-**Открываем браузер и по ссылке localhost/<название папки со скачанными файлами> видим наш сайт**
+**Открываем браузер и по ссылке `http://localhost/<название папки со скачанными файлами>/` видим наш сайт**
 
 # УРА!
