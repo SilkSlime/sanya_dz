@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+}
+
+.navbar {
+    background-color: aquamarine;
+    height: 8vh;
+}
+
+.navbar-item {
+    margin: 5px;
+}
+
+.content {
+    background-color: antiquewhite;
+    margin: 2vw;
+    min-height: 90vh;
+}
+
+.category {
+    background-color: red;
+    display: inline-block;
+    padding: 10px;
+    margin: auto;
+}
+
+.thread {
+    background-color: coral;
+}
+.thread-detail {
+
+}
+.comment-form {
+
+}
+.btn-submit {
+
+}
+
+.delete {
+    background-color: aqua;
+}
