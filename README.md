@@ -1,11 +1,21 @@
-**CTRL+ALT+T - открываем консоль, вводим**
+# КАК ЭТО ЗАПУСТИТЬ???
+
+### Скачиваем файлы
+**1. По зеленой кнопке нажимаем на DOWNLOAD ZIP**
+
+**2. Распаковаваем наш архив с помощью менеджера архивов (сам открывается при двойном клике по архиву) по пути `/var/www/html/`**
+
+### Устанавливаем LAMP (LinuxApacheMysqlPhp)
+**Чтобы установить php mysql и т д - CTRL+ALT+T - открываем консоль, вводим по очереди комманды (если просит пароль - вводим, который ставили при установки убунту или какой админский короче)**
 ```bash
 sudo apt-get update
 sudo apt-get install apache2 mysql-server php libapache2-mod-php php-mysql php-xml php-gd php-imap php-mysql
 sudo systemctl restart apache2
 sudo mysql
 ```
-**Теперь можно скопировать вообще от строки ниже и до конца и вставить в консоль**
+
+### Настраиваем БД под скачанный сайт
+**Можно скопировать вообще все строки ниже и до конца и вставить в консоль базы данных (консоль БД мы открыли командой sudo mysql)**
 ```mysql
 CREATE SCHEMA db_sanya;
 
@@ -60,3 +70,6 @@ INSERT INTO `categories` (`name`) VALUES ('/po/litics');
 INSERT INTO `categories` (`name`) VALUES ('/se/rials');
 INSERT INTO `categories` (`name`) VALUES ('/p/rogramming');
 ```
+**Открываем браузер и по ссылке `http://localhost/<название папки со скачанными файлами>/` видим наш сайт**
+
+# УРА!
