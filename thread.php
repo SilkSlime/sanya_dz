@@ -3,8 +3,11 @@ session_start();
 require "db.php";
 $conn = mysqli_connect($dbservername, $dbusername, $dbpassword, $dbname);
 $session_id = session_id();
-
+$admin = $_SESSION["admin"];
 $thread_id = $_GET["thread_id"];
+if ($admin) {
+    $admin_del = "<a href=\"thread_delete.php?thread_id=$thread_id\">X</a>";
+}
 $query = "SELECT * FROM `threads` WHERE `id` = $thread_id;";
 $res = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($res);
@@ -47,7 +50,9 @@ if ($_SERVER["REQUEST_METHOD"]=="POST") {
     <?php
     echo "
     <div class=\"thread-detail\">
-        <h1>$thread_title (#$thread_id)</h1>
+        <h1>$thread_title (#$thread_id)
+            $admin_del
+        </h1>
         <p>
             $thread_text
         </p>
